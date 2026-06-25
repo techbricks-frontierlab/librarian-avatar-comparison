@@ -1,0 +1,198 @@
+<!--
+BTB_POLARIS_MANIFEST
+screen_id: BTB_FLOW_002
+screen_name: Librarian Entry
+flow: reader
+source_raw_features: BeyondTheBook_MVP_raw_features_v2.json
+feature_ids: FEAT_006,FEAT_007,FEAT_012,FEAT_042,FEAT_044,FEAT_049
+poc_book: The Inner Zero Point
+status: pilot-live
+status_vocabulary: pilot-live | preview-mvp | roadmap-b2c | roadmap-b2b | marketing-surface
+handoff_target: Silvio Cifone / Polaris
+polaris_ready: true
+visual_validation_status: revised_polaris_v3
+visual_change_allowed: false
+code_only_update: true
+visible_ui_change: false
+-->
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="BTB_FLOW_002" name="btb:screen_id">
+<meta content="Librarian Entry" name="btb:screen_name">
+<meta content="reader" name="btb:flow">
+<meta content="BeyondTheBook_MVP_raw_features_v2.json" name="btb:source_raw_features">
+<meta content="FEAT_006,FEAT_007,FEAT_012,FEAT_042,FEAT_044,FEAT_049" name="btb:feature_ids">
+<meta content="pilot-live" name="btb:status">
+<meta content="Silvio Cifone / Polaris" name="btb:handoff_target">
+<meta content="true" name="btb:polaris_ready">
+<meta content="revised_polaris_v3" name="btb:visual_validation_status">
+<meta content="The Inner Zero Point" name="btb:poc_book">
+<meta content="false" name="btb:visual_change_allowed">
+<meta content="true" name="btb:code_only_update">
+<meta content="false" name="btb:visible_ui_change">
+<title>Beyond The Book - Librarian Agent</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Newsreader', 'serif'],
+            sans: ['Manrope', 'sans-serif'],
+          },
+          colors: {
+            'cream': '#F5F5DC',
+            'brand-brown': '#A0522D',
+            'brand-brown-hover': '#7A3D22',
+            'card-border': '#EAE6DB',
+            'text-primary': '#1A1A1A',
+            'text-secondary': '#666666',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-utilities">
+    body {
+      background-color: #F5F5DC;
+      color: #1A1A1A;
+    }
+    
+    .floating-card {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    }
+    
+    .chip {
+      transition: all 0.2s ease;
+    }
+    
+    .chip:hover {
+      border-color: #A0522D;
+      color: #A0522D;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased min-h-screen flex flex-col relative overflow-x-hidden bg-[#F5F5DC]" data-btb-feature-ids="FEAT_006,FEAT_007,FEAT_012,FEAT_042,FEAT_044,FEAT_049" data-btb-flow="reader" data-btb-handoff-target="silvio_polaris" data-btb-polaris-ready="true" data-btb-screen-id="BTB_FLOW_002" data-btb-screen-name="Librarian Entry" data-btb-source-raw-features="BeyondTheBook_MVP_raw_features_v2.json" data-btb-status="pilot-live" data-btb-poc-book="The Inner Zero Point" data-btb-visual-validation-status="revised_polaris_v3" data-btb-visual-change-allowed="false" data-btb-code-only-update="true" data-btb-visible-ui-change="false">
+<!-- BEGIN: MainHeader -->
+<header class="w-full px-6 py-8 md:px-16 flex items-center justify-between z-20 relative max-w-[1600px] mx-auto" data-btb-section="global_header" data-btb-status="pilot-live">
+<div class="flex items-center">
+<a class="font-serif font-bold text-2xl tracking-tight text-text-primary" href="#">
+        Beyond The Book
+      </a>
+</div>
+<nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-text-secondary">
+<a class="hover:text-text-primary transition-colors" href="#">Readers</a>
+<a class="hover:text-text-primary transition-colors" href="#">Authors &amp; Publishers</a>
+<a class="hover:text-text-primary transition-colors" href="#">Pricing</a>
+<a class="hover:text-text-primary transition-colors" href="#">Sign in</a>
+</nav>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="flex-grow flex flex-col items-center pt-8 px-6 md:px-12 relative z-10 w-full max-w-[1600px] mx-auto pb-8" data-btb-feature-ids="FEAT_006,FEAT_042" data-btb-section="librarian_entry" data-btb-status="pilot-live">
+<!-- Hero Text -->
+<div class="text-center max-w-4xl mx-auto mb-16 z-20">
+<h1 class="font-serif text-5xl md:text-[64px] text-text-primary leading-tight mb-6 tracking-tight">
+        What do you want to do with<br>your next book?
+      </h1>
+<p class="text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+        Tell the Librarian your goal. He'll match you with the right book and turn it into a 90-day practice path.
+      </p>
+</div>
+<!-- Main Interaction Area -->
+<div class="w-full grid grid-cols-1 gap-8 lg:gap-16 items-center relative z-20 lg:grid-cols-[1.8fr_1fr]">
+<!-- Left Column: The Input Card -->
+<div class="relative z-30 order-2 lg:order-1 w-full max-w-4xl lg:justify-self-start">
+<!-- MVP Preview Badge -->
+<div class="absolute -top-3 right-8 bg-[#FFBF00] text-[11px] font-bold px-4 py-1.5 rounded-full text-[#1A1A1A] shadow-sm z-40 transform translate-x-4 uppercase font-sans">AVAILABLE FROM PILOT</div>
+<div class="bg-white rounded-[2rem] p-10 md:p-12 shadow-xl border border-card-border relative">
+<div class="mb-8">
+<span class="text-[11px] font-bold tracking-[0.05em] text-[#8A9A5B] uppercase mb-3 block font-sans">LIBRARIAN AGENT · AVAILABLE FROM PILOT</span>
+<h2 class="font-serif text-4xl md:text-5xl text-text-primary tracking-tight">Start with a goal, not a catalog.</h2>
+</div>
+<div class="mb-8 relative" data-btb-feature-ids="FEAT_006,FEAT_042" data-btb-section="outcome_input" data-btb-status="pilot-live">
+<textarea class="w-full bg-white border border-[#E5E0D8] rounded-xl p-6 text-text-primary placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E5E0D8] focus:border-transparent resize-none text-lg shadow-inner min-h-[140px]" placeholder="I want to focus better and actually apply what I read..."></textarea>
+</div>
+<div class="flex flex-wrap gap-3 mb-12">
+<button class="chip px-5 py-2.5 bg-white border border-[#E5E0D8] rounded-full text-sm text-text-secondary shadow-sm">Focus better</button>
+<button class="chip px-5 py-2.5 bg-white border border-[#E5E0D8] rounded-full text-sm text-text-secondary shadow-sm">Build a daily practice</button>
+<button class="chip px-5 py-2.5 bg-white border border-[#E5E0D8] rounded-full text-sm text-text-secondary shadow-sm">Apply what I read</button>
+</div>
+<button class="bg-brand-brown hover:bg-brand-brown-hover text-white font-medium py-4 px-8 rounded-lg shadow-md transition-colors flex items-center justify-center w-auto text-lg mb-0" data-btb-handoff-screen="BTB_FLOW_024">
+            Ask the Librarian
+            <svg class="h-5 w-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+
+</div>
+</div>
+<!-- Right Column: The Librarian Illustration -->
+<div class="relative order-1 lg:order-2 flex items-center justify-center lg:justify-end z-10 w-full lg:h-[600px]" data-btb-feature-ids="FEAT_006,FEAT_042" data-btb-section="librarian_avatar" data-btb-status="pilot-live">
+<!-- Background Floating Cards -->
+<div class="absolute inset-0 z-20 pointer-events-none hidden md:block" data-btb-feature-ids="FEAT_007" data-btb-section="ping_author_hint" data-btb-status="pilot-live">
+<!-- Card 1 (Top Right, above focus) - A book to lead better -->
+<div class="floating-card absolute rounded-lg py-2 px-3 flex items-center gap-2 transform -rotate-1 shadow-md border border-white/40 bg-white/60 backdrop-blur-sm z-30 top-[15%] right-[-5%]">
+<div class="w-5 h-5 rounded-full bg-yellow-50/50 flex items-center justify-center text-yellow-700/60">
+<span class="material-symbols-outlined text-[14px] font-light">lightbulb</span>
+</div>
+<span class="text-[12px] font-medium text-gray-600/90 tracking-tight">A book to lead better</span>
+</div>
+<!-- Card 2 (Lower Left) - A book to think more clearly -->
+<div class="floating-card absolute bottom-[28%] right-[5%] rounded-lg py-2 px-3 flex items-center gap-2 transform -rotate-1 shadow-md border border-white/40 bg-white/60 backdrop-blur-sm z-30">
+<div class="w-5 h-5 rounded-full bg-blue-50/50 flex items-center justify-center text-blue-700/60">
+<span class="material-symbols-outlined text-[14px] font-light">auto_awesome</span>
+</div>
+<span class="text-[12px] font-medium text-gray-600/90 tracking-tight whitespace-nowrap">A book to think more clearly</span>
+</div>
+<!-- Card 3 (Top Right) - A book to build focus -->
+<div class="floating-card absolute top-[35%] right-[-5%] rounded-lg py-2 px-3 flex items-center gap-2 transform rotate-2 shadow-md border border-white/40 bg-white/60 backdrop-blur-sm z-30">
+<div class="w-5 h-5 rounded-full bg-green-50/50 flex items-center justify-center text-green-700/60">
+<span class="material-symbols-outlined text-[14px] font-light">adjust</span>
+</div>
+<span class="text-[12px] font-medium text-gray-600/90 tracking-tight">A book to build focus</span>
+</div>
+</div>
+<!-- The Librarian Character -->
+<div class="w-full relative z-10 flex items-center justify-center lg:justify-start">
+<img alt="The Librarian Character" class="w-auto h-auto max-h-[900px] object-contain z-10 lg:scale-[1.75] absolute top-1/2 -translate-y-1/2 right-12" data-btb-asset="librarian_portrait" src="https://raw.githubusercontent.com/lrinonapolitb/beyond-the-book-assets/main/portraits/librarian_v1.1.png">
+</div>
+</div>
+</div>
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: Footer -->
+<footer class="w-full px-6 py-8 md:px-16 flex flex-col md:flex-row items-center justify-between text-sm text-text-secondary border-t border-transparent relative max-w-[1600px] mx-auto z-50 bg-[#F5F5DC]" data-btb-section="global_footer" data-btb-status="pilot-live">
+<div class="font-serif font-bold text-xl text-text-primary mb-4 md:mb-0">
+      Beyond The Book
+    </div>
+<div class="flex space-x-8 mb-4 md:mb-0 px-4 py-1">
+<a class="hover:text-text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-text-primary transition-colors" href="#">Editorial Policy</a>
+<a class="hover:text-text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="px-4 py-1">&copy; 2026 Beyond The Book. All rights reserved.</div>
+</footer>
+<!-- END: Footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
