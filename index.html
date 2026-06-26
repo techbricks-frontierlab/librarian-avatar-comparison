@@ -187,7 +187,7 @@
 </div>
 </div>
 <!-- Avatar switcher + happy-path nudge -->
-<div class="w-full flex flex-col items-center mt-2 mb-2 px-4 relative z-[60]">
+<div class="w-full flex flex-col items-center mt-24 lg:mt-2 mb-2 px-4 relative z-[60]">
 <div id="avatarHint" class="text-[11px] font-bold tracking-[0.08em] text-[#8A9A5B] uppercase font-sans mb-3" aria-live="polite"></div>
 <div id="avatarSwitcher" class="inline-flex flex-wrap items-center justify-center gap-2 bg-white/80 backdrop-blur-sm border border-card-border rounded-[2rem] p-1.5 shadow-md max-w-full" role="group" aria-label="Scegli la versione del Librarian"></div>
 </div>
@@ -295,7 +295,7 @@
       coach.id = 'startCoach';
       coach.className = 'absolute bottom-full left-0 lg:left-1/2 lg:-translate-x-1/2 mb-3 flex flex-col items-start lg:items-center pointer-events-none select-none';
       coach.innerHTML =
-        '<span class="font-serif italic text-xl md:text-3xl text-brand-brown whitespace-normal text-left lg:text-center max-w-[80vw] lg:max-w-none lg:whitespace-nowrap drop-shadow-sm leading-tight">Comincia da qui!</span>' +
+        '<span class="font-serif italic text-xl md:text-3xl text-brand-brown whitespace-nowrap text-left lg:text-center drop-shadow-sm leading-tight">Comincia da qui!</span>' +
         '<svg class="coach-arrow h-9 w-9 text-brand-brown mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v15m0 0l-6-6m6 6l6-6"></path></svg>';
       wrap.appendChild(coach);
       switcher.appendChild(wrap);
